@@ -112,6 +112,7 @@
         </main>
 
         <!-- ASCII Space Art -->
+        <!--
         <pre class="space-art">           <span class="star-orange">*</span>             .              <span class="star-yellow">*</span>        <span class="star-blue">+</span>         <span class="star-orange">*</span>
                  <span class="star-blue">*</span>       <span class="star-orange">+</span>                <span class="star-yellow">*</span>              .
            '                  |              <span class="star-blue">*</span>       <span class="star-orange">+</span>
@@ -148,7 +149,7 @@
        <span class="star-yellow">*</span>          \    .___.    /    .    '<span class="star-orange">*</span>       <span class="star-blue">+</span>
               <span class="star-blue">+</span>    '-.       .-'        <span class="star-yellow">*</span>          .
            .           '---'        <span class="star-orange">*</span>         <span class="star-blue">*</span>      <span class="star-yellow">+</span>
-  <span class="star-blue">*</span>                               .         <span class="star-yellow">*</span>       <span class="star-orange">*</span>
+  <span class="star-blue">*</span>                               .         <span class="yellow">*</span>       <span class="star-orange">*</span>
         .    <span class="star-orange">*</span>          <span class="star-blue">*</span>                <span class="star-yellow">*</span>      <span class="star-blue">+</span>       .
      <span class="star-orange">+</span>            .             <span class="star-blue">+</span>       .         <span class="star-yellow">*</span>      <span class="star-orange">*</span>
                       <span class="star-orange">*</span>                 .              <span class="star-blue">*</span>
@@ -177,6 +178,7 @@
             .                     <span class="star-blue">*</span>
                   more coming soon...
         </pre>
+        -->
 
     </div>
 
@@ -188,7 +190,6 @@
         let currentPercent = 0;
         const barLength = 20;
 
-        // Generate loading bar based on percentage
         function generateFrame(percent) {
             const filled = Math.floor(percent / 5);
             const empty = barLength - filled;
@@ -198,7 +199,6 @@
 [${bar}] ${percent}%`;
         }
 
-        // Animate the ASCII loader (1 second total / 101 frames = ~10ms per frame)
         const interval = setInterval(() => {
             loader.textContent = generateFrame(currentPercent);
             currentPercent++;
@@ -207,7 +207,6 @@
             }
         }, 10);
 
-        // Hide loading screen after animation completes
         setTimeout(() => {
             loadingScreen.classList.add('fade-out');
             setTimeout(() => {
