@@ -8,12 +8,84 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <pre id="ascii-loader"></pre>
+    </div>
+
+    <!-- ASCII Space Art -->
+    <pre class="space-art">           <span class="star-orange">*</span>             .              <span class="star-yellow">*</span>        <span class="star-blue">+</span>         <span class="star-orange">*</span>
+                 <span class="star-blue">*</span>       <span class="star-orange">+</span>                <span class="star-yellow">*</span>              .
+           '                  |              <span class="star-blue">*</span>       <span class="star-orange">+</span>
+       ()    .-.,="``"=.    - o -      <span class="star-yellow">*</span>           .
+             '=/_       \     |                <span class="star-blue">+</span>      <span class="star-orange">*</span>
+          <span class="star-yellow">*</span>   |  '=._    |            <span class="star-orange">*</span>        .
+               \     `=./`,        '       <span class="star-blue">*</span>         <span class="star-yellow">+</span>
+            .   '=.__.=' `='      <span class="star-blue">*</span>              <span class="star-orange">*</span>
+   <span class="star-orange">+</span>                         <span class="star-yellow">+</span>          <span class="star-blue">*</span>        .
+        O      <span class="star-blue">*</span>        '       .       <span class="star-yellow">*</span>          <span class="star-orange">+</span>
+                                                  <span class="star-blue">*</span>        .
+           <span class="star-yellow">*</span>             .              <span class="star-orange">*</span>      <span class="star-blue">+</span>          <span class="star-yellow">*</span>
+                 '                          .         <span class="star-orange">*</span>
+     .        <span class="star-blue">+</span>        .            <span class="star-yellow">*</span>      <span class="star-orange">+</span>         .
+  <span class="star-orange">*</span>              ___                      <span class="star-blue">*</span>        <span class="star-yellow">*</span>
+            .--'   '-.         .              <span class="star-orange">+</span>        <span class="star-blue">*</span>
+           /  o    o  \              <span class="star-yellow">+</span>            .
+          |     __     |    .              .       <span class="star-orange">*</span>
+      <span class="star-blue">*</span>    \   /__\   /         .            <span class="star-yellow">*</span>       <span class="star-blue">+</span>
+            '-._  _.-'               <span class="star-orange">*</span>              .
+       .         ||            .             <span class="star-blue">*</span>        <span class="star-yellow">*</span>
+                 ||    <span class="star-yellow">*</span>                   <span class="star-blue">*</span>      <span class="star-orange">+</span>
+              .-'||'-.                         .         <span class="star-yellow">*</span>
+         <span class="star-orange">*</span>   /   ||   \        .            <span class="star-blue">*</span>        .
+            |    ||    |            <span class="star-yellow">*</span>       '      <span class="star-orange">+</span>
+             \   ||   /    <span class="star-blue">*</span>            .            <span class="star-yellow">*</span>
+          .   '-.__.-'             <span class="star-orange">*</span>                <span class="star-yellow">*</span>      <span class="star-blue">+</span>
+                                <span class="star-blue">*</span>        .              <span class="star-orange">*</span>
+    .        <span class="star-yellow">*</span>           .---.                  .       <span class="star-blue">*</span>
+       <span class="star-orange">*</span>              .-'     '-.            <span class="star-yellow">+</span>         .
+   <span class="star-blue">+</span>              .-'  o     o  '-.         <span class="star-yellow">*</span>      <span class="star-orange">*</span>
+              <span class="star-orange">*</span>  |      ___      |    <span class="star-blue">+</span>           .
+          .      |     (___)     |          .      <span class="star-yellow">*</span>
+       <span class="star-yellow">*</span>          \    .___.    /    .    '<span class="star-orange">*</span>       <span class="star-blue">+</span>
+              <span class="star-blue">+</span>    '-.       .-'        <span class="star-yellow">*</span>          .
+           .           '---'        <span class="star-orange">*</span>         <span class="star-blue">*</span>      <span class="star-yellow">+</span>
+  <span class="star-blue">*</span>                               .         <span class="star-yellow">*</span>       <span class="star-orange">*</span>
+        .    <span class="star-orange">*</span>          <span class="star-blue">*</span>                <span class="star-yellow">*</span>      <span class="star-blue">+</span>       .
+     <span class="star-orange">+</span>            .             <span class="star-blue">+</span>       .         <span class="star-yellow">*</span>      <span class="star-orange">*</span>
+                      <span class="star-orange">*</span>                 .              <span class="star-blue">*</span>
+   <span class="star-blue">*</span>        .                  <span class="star-yellow">*</span>    ,MMM8&&&.       <span class="star-orange">+</span>
+                 .          _...MMMMM88&&&&..._        <span class="star-yellow">*</span>
+       .                 .::'''MMMMM88&&&&&&'''::.      <span class="star-blue">*</span>
+                        ::     MMMMM88&&&&&&     ::
+         .              '::....MMMMM88&&&&&&....::'       <span class="star-orange">*</span>
+         .                 `''''MMMMM88&&&&''''`     <span class="star-yellow">+</span>
+         :                  - --<span class="star-orange">+</span>- -  'MMM8&&&'        <span class="star-blue">*</span>
+         !           .          !         <span class="star-yellow">*</span>        .
+         |        .             .             <span class="star-orange">+</span>       <span class="star-blue">*</span>
+         |_         <span class="star-yellow">+</span>                    <span class="star-orange">*</span>        .
+      ,  | `.                          .           <span class="star-yellow">*</span>
+--- --<span class="star-blue">+</span>-<#>-<span class="star-orange">+</span>- ---  --  -      <span class="star-yellow">*</span>            <span class="star-blue">+</span>
+      `._|_,'                      <span class="star-orange">*</span>          .
+         T                    <span class="star-yellow">+</span>        <span class="star-blue">*</span>        .
+         |              <span class="star-orange">*</span>           .            <span class="star-yellow">*</span>
+         !        <span class="star-blue">*</span>          .               <span class="star-orange">+</span>
+         :         . :        <span class="star-yellow">*</span>          .         <span class="star-blue">*</span>
+         .       <span class="star-yellow">*</span>              <span class="star-orange">+</span>          <span class="star-blue">*</span>        .
+
+              <span class="star-yellow">*</span>          <span class="star-blue">+</span>            <span class="star-orange">*</span>
+                   .                  <span class="star-yellow">*</span>
+       <span class="star-blue">*</span>              <span class="star-orange">+</span>         .            <span class="star-yellow">*</span>
+            .                     <span class="star-blue">*</span>
+                  more coming soon...
+    </pre>
+
     <div class="container">
         <header class="header">
             <div class="profile-section">
                 <img src="irobot-i-robot.gif" alt="Profile Photo" class="profile-image">
                 <h1>christian hendrik wilsch</h1>
-                <p class="tagline"></p>
+                <p class="tagline">mechanical engineering graduate</p>
             </div>
         </header>
 
@@ -22,11 +94,11 @@
                 <h2>about</h2>
                 <p>hi i am christian, i am interested in</p>
                 <ul>
-                    <li>engineering and design</li>
-                    <li>ai and robotics</li>
                     <li>creative problem solving</li>
-                    <li>sports and fitness</li>
-                    <li>simplicity and truth</li>
+                    <li>learning</li>
+                    <li>sports</li>
+                    <li>simplicity</li>
+                    <li>feedback</li>
                 </ul>
             </section>
 
@@ -62,7 +134,7 @@
             </section>
 
             <section class="projects">
-                <h2>academic projects & publications</h2>
+                <h2>publications</h2>
                 <div class="project-item">
                     <h3>co-authored paper</h3>
                     <p>"soil modelling impact on the natural frequency of offshore wind turbines with reference to in-field measurements" - isfog 2025 conference</p>
@@ -108,5 +180,41 @@
         </main>
 
     </div>
+
+    <script>
+        // ASCII Loading Animation
+        const loader = document.getElementById('ascii-loader');
+        const loadingScreen = document.getElementById('loading-screen');
+
+        let currentPercent = 0;
+        const barLength = 20;
+
+        // Generate loading bar based on percentage
+        function generateFrame(percent) {
+            const filled = Math.floor(percent / 5);
+            const empty = barLength - filled;
+            const bar = '#'.repeat(filled) + '-'.repeat(empty);
+            return `stealing 1 second of your time...
+
+[${bar}] ${percent}%`;
+        }
+
+        // Animate the ASCII loader (1 second total / 101 frames = ~10ms per frame)
+        const interval = setInterval(() => {
+            loader.textContent = generateFrame(currentPercent);
+            currentPercent++;
+            if (currentPercent > 100) {
+                clearInterval(interval);
+            }
+        }, 10);
+
+        // Hide loading screen after animation completes
+        setTimeout(() => {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 1000);
+    </script>
 </body>
 </html>
