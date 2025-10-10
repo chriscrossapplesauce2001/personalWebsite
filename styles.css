@@ -7,7 +7,6 @@ body {
 }
 
 .container {
-    max-width: 600px;
     margin: 0;
 }
 
@@ -69,7 +68,7 @@ section {
 }
 
 .timeline-item {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     margin-left: 20px;
 }
 
