@@ -15,15 +15,18 @@
 
     <div class="container">
         <header class="header">
-            <div class="profile-section">
-                <div class="profile-image" style="background: #ddd; display: flex; align-items: center; justify-content: center; color: #888;">Placeholder</div>
+            <div class="header-left">
                 <h1>christian hendrik wilsch</h1>
                 <p class="tagline">mechanical engineering graduate</p>
+                <p class="location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    hamburg, germany
+                </p>
             </div>
         </header>
 
         <main>
-            <section class="about">
+            <section class="section about">
                 <h2>about</h2>
                 <p>hi i am christian, i am interested in</p>
                 <ul>
@@ -35,83 +38,96 @@
                 </ul>
             </section>
 
-            <section class="experience">
+            <section class="section">
                 <h2>experience</h2>
-                <div class="timeline-item">
-                    <div class="timeline-date">06.2025 - 12.2025</div>
-                    <div class="timeline-content">
-                        <h3>master's student</h3>
-                        <p class="company">tkms, kiel, germany</p>
-                        <p>working on something with ai</p>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>tkms</h3>
+                        <span class="card-date">06.2025 - 12.2025</span>
                     </div>
+                    <p class="card-subtitle">master's student</p>
+                    <p class="card-location">kiel, germany</p>
+                    <p class="card-description">working on something with ai</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">05.2021 - 06.2025</div>
-                    <div class="timeline-content">
-                        <h3>working student</h3>
-                        <p class="company">siemens gamesa renewable energy, hamburg, germany</p>
-                        <p>working student specializing in offshore wind turbine foundation design</p>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>siemens gamesa renewable energy</h3>
+                        <span class="card-date">05.2021 - 06.2025</span>
                     </div>
+                    <p class="card-subtitle">working student</p>
+                    <p class="card-location">hamburg, germany</p>
+                    <p class="card-description">working student specializing in offshore wind turbine foundation design</p>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">09.2022 - 12.2022</div>
-                    <div class="timeline-content">
-                        <h3>internship in load and structural design</h3>
-                        <p class="company">siemens gamesa, the hague, netherlands</p>
-                        <p>internship in load and structural design for offshore wind turbines</p>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>siemens gamesa</h3>
+                        <span class="card-date">09.2022 - 12.2022</span>
                     </div>
+                    <p class="card-subtitle">internship in load and structural design</p>
+                    <p class="card-location">the hague, netherlands</p>
+                    <p class="card-description">internship in load and structural design for offshore wind turbines</p>
                 </div>
-
             </section>
 
-            <section class="projects">
+            <section class="section">
                 <h2>publications</h2>
-                <div class="project-item">
-                    <h3>soil modelling impact on the natural frequency of offshore wind turbines with reference to in-field measurements</h3>
-                    <p>international society for soil mechanics and geotechnical engineering (issmge) · june 9, 2025</p>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>soil modelling impact on the natural frequency of offshore wind turbines with reference to in-field measurements</h3>
+                    </div>
+                    <p class="card-description">international society for soil mechanics and geotechnical engineering (issmge) · june 9, 2025</p>
                 </div>
-
-                <div class="project-item">
-                    <h3>bachelor's thesis @ siemens gamesa - research on wind turbine foundation design</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>bachelor's thesis @ siemens gamesa - research on wind turbine foundation design</h3>
+                    </div>
                 </div>
             </section>
 
-
-            <section class="education">
+            <section class="section">
                 <h2>education</h2>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024-2025</div>
-                    <div class="timeline-content">
+                <div class="card">
+                    <div class="card-header">
                         <h3>master of science: mechanical engineering</h3>
-                        <p class="company">hamburg university of applied sciences, hamburg, germany</p>
-                        <p>study focus: computational methods</p>
+                        <span class="card-date">2024 - 2025</span>
                     </div>
+                    <p class="card-location">hamburg university of applied sciences, hamburg, germany</p>
+                    <p class="card-description">study focus: computational methods</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2019-2023</div>
-                    <div class="timeline-content">
+                <div class="card">
+                    <div class="card-header">
                         <h3>bachelor of science: mechanical engineering</h3>
-                        <p class="company">hamburg university of applied sciences, hamburg, germany</p>
-                        <p>study focus: development & design</p>
+                        <span class="card-date">2019 - 2023</span>
                     </div>
+                    <p class="card-location">hamburg university of applied sciences, hamburg, germany</p>
+                    <p class="card-description">study focus: development & design</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2011-2019</div>
-                    <div class="timeline-content">
+                <div class="card">
+                    <div class="card-header">
                         <h3>german high school diploma (abitur)</h3>
-                        <p class="company">gymnasium schenefeld, schenefeld, germany</p>
-                        <p>stem concentration physics, chemistry</p>
-                        <p style="font-size: 11px">[2007-2008 elementary school at the cairo american college, <em>egypt</em>]</p>
+                        <span class="card-date">2011 - 2019</span>
                     </div>
+                    <p class="card-location">gymnasium schenefeld, schenefeld, germany</p>
+                    <p class="card-description">stem concentration physics, chemistry</p>
+                    <p class="card-note">[2007-2008 elementary school at the cairo american college, <em>egypt</em>]</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>skills</h2>
+                <div class="tags-container">
+                    <span class="tag">python</span>
+                    <span class="tag">matlab</span>
+                    <span class="tag">fea</span>
+                    <span class="tag">structural analysis</span>
+                    <span class="tag">offshore wind</span>
+                    <span class="tag">ai/ml</span>
                 </div>
             </section>
         </main>
 
         <!-- ASCII Space Art -->
+        <div class="ascii-container">
         <pre class="space-art">           <span class="star-orange star-twinkle">*</span>             .              <span class="star-yellow">*</span>        <span class="star-blue">+</span>         <span class="star-orange">*</span>             .        <span class="star-yellow star-twinkle">*</span>       <span class="star-blue">+</span>           <span class="star-orange">*</span>         .
                  <span class="star-blue">*</span>       <span class="star-orange">+</span>                <span class="star-yellow star-twinkle">*</span>              .                    <span class="star-blue">*</span>                <span class="star-yellow">+</span>        .            <span class="star-orange">*</span>
            '                  |              <span class="star-blue">*</span>       <span class="star-orange star-twinkle">+</span>                     .          <span class="star-yellow">*</span>              <span class="star-blue">+</span>            .
@@ -177,6 +193,7 @@
             .                     <span class="star-blue star-twinkle">*</span>                     <span class="star-yellow">+</span>              <span class="star-orange">*</span>           .               <span class="star-blue">+</span>             <span class="star-yellow star-twinkle">*</span>
                   more coming soon...
         </pre>
+        </div>
 
     </div>
 
