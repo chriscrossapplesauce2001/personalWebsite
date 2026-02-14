@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <pre id="ascii-loader"></pre>
-    </div>
 
     <div class="container">
         <header class="header">
@@ -251,37 +247,5 @@
 
     </div>
 
-    <script>
-        // ASCII Loading Animation
-        const loader = document.getElementById('ascii-loader');
-        const loadingScreen = document.getElementById('loading-screen');
-
-        let currentPercent = 0;
-        const barLength = 20;
-
-        function generateFrame(percent) {
-            const filled = Math.floor(percent / 5);
-            const empty = barLength - filled;
-            const bar = '#'.repeat(filled) + '-'.repeat(empty);
-            return `stealing 1 second of your time...
-
-[${bar}] ${percent}%`;
-        }
-
-        const interval = setInterval(() => {
-            loader.textContent = generateFrame(currentPercent);
-            currentPercent++;
-            if (currentPercent > 100) {
-                clearInterval(interval);
-            }
-        }, 10);
-
-        setTimeout(() => {
-            loadingScreen.classList.add('fade-out');
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 1000);
-    </script>
 </body>
 </html>
