@@ -140,40 +140,22 @@ body {
 }
 
 .card-clickable {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: default;
+    position: relative;
     transition: border-color 0.2s;
-    -webkit-text-decoration: none;
-}
-
-.card-clickable:visited,
-.card-clickable:active {
-    color: inherit;
-    text-decoration: none;
-}
-
-.card-clickable h3,
-.card-clickable .card-description,
-.card-clickable .card-subtitle,
-.card-clickable .card-location,
-.card-clickable .card-date,
-.card-clickable .card-note {
-    color: inherit;
-}
-
-.card-clickable h3 {
-    color: #cccccc;
-}
-
-.card-clickable .card-description {
-    color: #999999;
+    cursor: pointer;
 }
 
 .card-clickable:hover {
     border-color: #444444;
-    cursor: pointer;
+}
+
+.card-stretch-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .card-link {
