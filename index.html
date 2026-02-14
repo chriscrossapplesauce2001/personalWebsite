@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>christian hendrik wilsch - personal website</title>
+    <title>christian hendrik wilsch</title>
     <link rel="icon" href="smile.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,7 +17,7 @@
         <header class="header">
             <div class="header-left">
                 <h1>christian hendrik wilsch</h1>
-                <p class="tagline">mechanical engineering graduate</p>
+                <p class="tagline">engineer</p>
                 <p class="location">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     hamburg, germany
@@ -60,7 +60,7 @@
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h3>siemens gamesa</h3>
+                        <h3>siemens gamesa renewable energy</h3>
                         <span class="card-date">09.2022 - 12.2022</span>
                     </div>
                     <p class="card-subtitle">internship in load and structural design</p>
@@ -71,17 +71,12 @@
 
             <section class="section">
                 <h2>publications</h2>
-                <div class="card">
+                <a href="https://www.issmge.org/uploads/publications/132/133/ISFOG2025-403.pdf" target="_blank" class="card card-clickable">
                     <div class="card-header">
                         <h3>soil modelling impact on the natural frequency of offshore wind turbines with reference to in-field measurements</h3>
                     </div>
                     <p class="card-description">international society for soil mechanics and geotechnical engineering (issmge) · june 9, 2025</p>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h3>bachelor's thesis @ siemens gamesa - research on wind turbine foundation design</h3>
-                    </div>
-                </div>
+                </a>
             </section>
 
             <section class="section">
@@ -115,14 +110,73 @@
 
             <section class="section">
                 <h2>skills</h2>
-                <div class="tags-container">
-                    <span class="tag">python</span>
-                    <span class="tag">matlab</span>
-                    <span class="tag">fea</span>
-                    <span class="tag">structural analysis</span>
-                    <span class="tag">offshore wind</span>
-                    <span class="tag">ai/ml</span>
+
+                <div class="skill-group">
+                    <p class="skill-group-label">programming</p>
+                    <div class="tags">
+                        <span class="tag">python (pytorch, scikit-learn)</span>
+                        <span class="tag">git</span>
+                        <span class="tag">docker</span>
+                        <span class="tag">linux</span>
+                        <span class="tag">sql</span>
+                        <span class="tag">matlab</span>
+                    </div>
                 </div>
+
+                <div class="skill-group">
+                    <p class="skill-group-label">web development</p>
+                    <div class="tags">
+                        <span class="tag">typescript</span>
+                        <span class="tag">next.js</span>
+                        <span class="tag">tailwind css</span>
+                        <span class="tag">postgresql</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="skill-group-label">simulation</p>
+                    <div class="tags">
+                        <span class="tag">simulink</span>
+                        <span class="tag">ansys (workbench, apdl, fluent)</span>
+                        <span class="tag">plaxis 3d</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="skill-group-label">cad</p>
+                    <div class="tags">
+                        <span class="tag">ptc creo</span>
+                        <span class="tag">windchill</span>
+                        <span class="tag">freecad</span>
+                        <span class="tag">fusion</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="skill-group-label">tools</p>
+                    <div class="tags">
+                        <span class="tag">latex</span>
+                        <span class="tag">ms office</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>projects</h2>
+                <a href="https://studio-planer.com" target="_blank" class="card card-clickable">
+                    <div class="card-header">
+                        <h3>studio-planer.com</h3>
+                        <span class="status-dot"></span>
+                    </div>
+                    <p class="card-description">shift planning web app for a local gym — next.js, typescript, postgresql</p>
+                </a>
+                <a href="https://umbra-robotics.com/" target="_blank" class="card card-clickable">
+                    <div class="card-header">
+                        <h3>robotic arm imitation learning</h3>
+                        <span class="status-dot"></span>
+                    </div>
+                    <p class="card-description">training a robotic arm to perform tasks using imitation learning</p>
+                </a>
             </section>
         </main>
 
