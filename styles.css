@@ -295,10 +295,6 @@ body {
         font-size: 10px;
     }
 
-    #ascii-loader {
-        font-size: 12px;
-    }
-
 }
 
 @media (min-width: 768px) {
