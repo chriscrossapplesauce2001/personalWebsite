@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess board — christian hendrik wilsch</title>
+    <link rel="icon" href="smile.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #0c0c0c;
+            color: #cccccc;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 672px;
+            width: 100%;
+        }
+        .back {
+            font-size: 13px;
+            color: #777777;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        .back:hover { color: #cccccc; }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .description {
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 24px;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #222222;
+            display: block;
+        }
+        .caption {
+            font-size: 11px;
+            color: #666666;
+            margin-top: 4px;
+            margin-bottom: 12px;
+        }
+        @media (min-width: 768px) {
+            body { padding: 64px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">← back</a>
+        <h1>chess board</h1>
+        <p class="description">handmade wooden chess board, built from scratch</p>
+        <div class="gallery">
+            <div>
+                <img src="chess-board-materials.jpg" alt="wood strips and glue — raw materials">
+                <p class="caption">raw materials — wood strips and glue</p>
+            </div>
+            <div>
+                <img src="chess-board-glueup.jpg" alt="glue-up under pressure with weights">
+                <p class="caption">glue-up under pressure</p>
+            </div>
+            <div>
+                <img src="chess-board.jpeg" alt="finished chess board">
+                <p class="caption">finished board</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
