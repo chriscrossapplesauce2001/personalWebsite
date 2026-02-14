@@ -217,7 +217,7 @@
        <span class="star-yellow">*</span>          \    .___.    /    .    '<span class="star-orange star-twinkle">*</span>       <span class="star-blue">+</span>                     <span class="star-yellow">*</span>           .              <span class="star-orange">+</span>            <span class="star-blue star-twinkle">*</span>
               <span class="star-blue">+</span>    '-.       .-'        <span class="star-yellow star-twinkle">*</span>          .                   <span class="star-orange">*</span>              <span class="star-blue">+</span>         <span class="star-yellow">*</span>                .
            .           '---'        <span class="star-orange star-twinkle">*</span>         <span class="star-blue">*</span>      <span class="star-yellow">+</span>                 .            <span class="star-orange">+</span>                <span class="star-blue">*</span>          <span class="star-yellow">*</span>
-  <span class="star-blue star-twinkle">*</span>                               .         <span class="yellow">*</span>       <span class="star-orange">*</span>                       <span class="star-blue">+</span>          .              <span class="star-yellow">*</span>             <span class="star-orange star-twinkle">+</span>
+  <span class="star-blue star-twinkle">*</span>                               .         <span class="star-yellow">*</span>       <span class="star-orange">*</span>                       <span class="star-blue">+</span>          .              <span class="star-yellow">*</span>             <span class="star-orange star-twinkle">+</span>
         .    <span class="star-orange">*</span>          <span class="star-blue star-twinkle">*</span>                <span class="star-yellow">*</span>      <span class="star-blue">+</span>       .            <span class="star-orange">*</span>                <span class="star-yellow star-twinkle">+</span>         .              <span class="star-blue">*</span>
      <span class="star-orange star-twinkle">+</span>            .             <span class="star-blue">+</span>       .         <span class="star-yellow">*</span>      <span class="star-orange">*</span>                       .              <span class="star-blue">+</span>          <span class="star-yellow star-twinkle">*</span>             <span class="star-orange">+</span>
                       <span class="star-orange">*</span>                 .              <span class="star-blue star-twinkle">*</span>                     <span class="star-yellow">+</span>              <span class="star-orange">*</span>          .                <span class="star-blue">+</span>
@@ -250,5 +250,112 @@
 
     </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.ascii-container');
+    if (!container) return;
+
+    const stars = Array.from(container.querySelectorAll('span[class*="star-"]'));
+    if (!stars.length) return;
+
+    const MOUSE_RADIUS = 150;
+    const MAX_OFFSET = 180;
+    const RETURN_SPEED = 0.3;
+
+    let mouseX = null;
+    let mouseY = null;
+
+    const starData = stars.map(el => {
+        const rect = el.getBoundingClientRect();
+        const contRect = container.getBoundingClientRect();
+        return {
+            el,
+            x: rect.left - contRect.left + container.scrollLeft + rect.width / 2,
+            y: rect.top - contRect.top + rect.height / 2,
+            offsetX: 0,
+            offsetY: 0
+        };
+    });
+
+    function recache() {
+        const contRect = container.getBoundingClientRect();
+        starData.forEach(s => {
+            s.el.style.transform = '';
+            s.offsetX = 0;
+            s.offsetY = 0;
+        });
+        requestAnimationFrame(() => {
+            starData.forEach(s => {
+                const rect = s.el.getBoundingClientRect();
+                s.x = rect.left - contRect.left + container.scrollLeft + rect.width / 2;
+                s.y = rect.top - contRect.top + rect.height / 2;
+            });
+        });
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(recache, 200);
+    });
+
+    container.addEventListener('mousemove', e => {
+        const contRect = container.getBoundingClientRect();
+        mouseX = e.clientX - contRect.left + container.scrollLeft;
+        mouseY = e.clientY - contRect.top;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        mouseX = null;
+        mouseY = null;
+    });
+
+    function tick() {
+        for (const s of starData) {
+            let pushed = false;
+
+            if (mouseX !== null) {
+                const dx = s.x + s.offsetX - mouseX;
+                const dy = s.y + s.offsetY - mouseY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < MOUSE_RADIUS && dist > 0) {
+                    const force = (1 - dist / MOUSE_RADIUS);
+                    const angle = Math.atan2(dy, dx);
+                    s.offsetX += Math.cos(angle) * force * 8;
+                    s.offsetY += Math.sin(angle) * force * 8;
+
+                    const mag = Math.sqrt(s.offsetX * s.offsetX + s.offsetY * s.offsetY);
+                    if (mag > MAX_OFFSET) {
+                        s.offsetX = (s.offsetX / mag) * MAX_OFFSET;
+                        s.offsetY = (s.offsetY / mag) * MAX_OFFSET;
+                    }
+                    pushed = true;
+                }
+            }
+
+            if (!pushed) {
+                const mag = Math.sqrt(s.offsetX * s.offsetX + s.offsetY * s.offsetY);
+                if (mag > 0.5) {
+                    s.offsetX -= (s.offsetX / mag) * RETURN_SPEED;
+                    s.offsetY -= (s.offsetY / mag) * RETURN_SPEED;
+                } else {
+                    s.offsetX = 0;
+                    s.offsetY = 0;
+                }
+            }
+
+            if (s.offsetX === 0 && s.offsetY === 0) {
+                s.el.style.transform = '';
+            } else {
+                s.el.style.transform = `translate(${s.offsetX}px, ${s.offsetY}px)`;
+            }
+        }
+        requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+});
+</script>
 </body>
 </html>
