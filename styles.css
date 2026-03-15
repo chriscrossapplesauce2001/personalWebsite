@@ -169,10 +169,12 @@ body::before {
 
 .card-thumb {
     width: 100%;
+    height: auto;
     border-radius: 4px;
     margin-top: 8px;
     object-fit: cover;
     max-height: 200px;
+    -webkit-max-logical-height: 200px;
 }
 
 .card-clickable {
@@ -369,6 +371,7 @@ body::before {
 
     .card-thumb {
         max-height: 120px;
+        height: 120px;
     }
 
 }
