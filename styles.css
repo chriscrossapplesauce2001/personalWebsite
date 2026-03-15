@@ -110,6 +110,7 @@ body::before {
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 8px;
+    overflow: hidden;
 }
 
 .card:last-child {
