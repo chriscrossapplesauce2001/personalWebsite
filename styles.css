@@ -167,6 +167,14 @@ body::before {
     flex-shrink: 0;
 }
 
+.card-thumb {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 8px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
 .card-clickable {
     position: relative;
     transition: border-color 0.2s;
