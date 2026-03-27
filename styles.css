@@ -331,28 +331,40 @@ body::before {
     animation-delay: 0.7s;
 }
 
-/* Impressum */
-.impressum {
+/* Footer */
+.footer {
     margin-top: 32px;
     padding-top: 16px;
     border-top: 1px solid #222222;
+    text-align: center;
+}
+
+.footer-link {
     font-size: 12px;
     color: #666666;
+    text-decoration: none;
 }
 
-.impressum h2 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: #888888;
+.footer-link:hover {
+    color: #999999;
 }
 
-.impressum p {
+/* Legal page */
+.back-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #666666;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.back-link:hover {
+    color: #999999;
+}
+
+.legal p {
+    font-size: 13px;
     margin-bottom: 2px;
-}
-
-.impressum h2 + h2 {
-    margin-top: 12px;
 }
 
 .impressum-link {
