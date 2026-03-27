@@ -351,6 +351,20 @@ body::before {
     margin-bottom: 2px;
 }
 
+.impressum h2 + h2 {
+    margin-top: 12px;
+}
+
+.impressum-link {
+    color: #888888;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.impressum-link:hover {
+    color: #cccccc;
+}
+
 /* Responsive */
 @media (max-width: 479px) {
     .header-left h1 {
