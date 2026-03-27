@@ -331,6 +331,26 @@ body::before {
     animation-delay: 0.7s;
 }
 
+/* Impressum */
+.impressum {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #222222;
+    font-size: 12px;
+    color: #666666;
+}
+
+.impressum h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #888888;
+}
+
+.impressum p {
+    margin-bottom: 2px;
+}
+
 /* Responsive */
 @media (max-width: 479px) {
     .header-left h1 {
