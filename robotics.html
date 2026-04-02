@@ -37,17 +37,13 @@
             color: #999999;
             margin-bottom: 24px;
         }
-        video {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid #222222;
-            display: block;
+        .tweets {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
-        .caption {
-            font-size: 11px;
-            color: #666666;
-            margin-top: 4px;
-            margin-bottom: 12px;
+        .tweets .twitter-tweet {
+            margin: 0 !important;
         }
         @media (min-width: 768px) {
             body { padding: 64px 16px; }
@@ -59,10 +55,11 @@
         <a href="index.html" class="back">← back</a>
         <h1>robotic arm imitation learning</h1>
         <p class="description">training a robotic arm to perform tasks using imitation learning</p>
-        <div>
-            <video src="lerob.mp4" controls autoplay muted loop playsinline></video>
-            <p class="caption">told claude code to control my robot arm to pick up a whiteboard marker. it touched it. maybe agi is close</p>
+        <div class="tweets">
+            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/christianhdkwls/status/2036128733606666610"></a></blockquote>
+            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/christianhdkwls/status/2036128733606666610"></a></blockquote>
         </div>
+        <script async src="https://platform.twitter.com/widgets.js"></script>
         <p class="description">built with <a href="https://umbra-robotics.com/" target="_blank" style="color: #999999;">umbra robotics</a></p>
     </div>
 </body>
