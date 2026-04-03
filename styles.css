@@ -8,7 +8,7 @@
 body {
     font-family: 'Consolas', 'Courier New', monospace;
     line-height: 1.5;
-    color: #cccccc;
+    color: #ffffff;
     background-color: #0c0c0c;
     padding: 16px;
     display: flex;
@@ -105,8 +105,8 @@ body::before {
 
 /* Cards */
 .card {
-    background: #0e0e0e;
-    border: 1px solid #222222;
+    background: #080808;
+    border: 1px solid #1a1a1a;
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 8px;
@@ -238,10 +238,10 @@ body::before {
 .tag {
     font-size: 12px;
     padding: 4px 10px;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #1a1a1a;
     border-radius: 999px;
-    background: #161616;
-    color: #bbbbbb;
+    background: #080808;
+    color: #ffffff;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
